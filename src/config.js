@@ -65,6 +65,7 @@ import MyAssetsSource from "./ui/assets/sources/MyAssetsSource";
 import ArchitectureKitSource from "./ui/assets/sources/ArchitectureKitSource";
 import RockKitSource from "./ui/assets/sources/RockKitSource";
 import HubsSoundPackSource from "./ui/assets/sources/HubsSoundPackSource";
+import YukizemiPackSource from "./ui/assets/YukizemiPackSource";
 
 import TroikaTextNode from "./editor/nodes/TroikaTextNode";
 import TroikaTextNodeEditor from "./ui/properties/TroikaTextNodeEditor";
@@ -104,13 +105,14 @@ export function createEditor(api, settings) {
 
   editor.registerSource(new ElementsSource(editor));
   editor.registerSource(new MyAssetsSource(editor));
-  editor.registerSource(new ArchitectureKitSource(api));
-  editor.registerSource(new RockKitSource(api));
+  // editor.registerSource(new ArchitectureKitSource(api));
+  // editor.registerSource(new RockKitSource(api));
   editor.registerSource(new SketchfabSource(api));
-  editor.registerSource(new BingImagesSource(api));
-  editor.registerSource(new BingVideosSource(api));
-  editor.registerSource(new HubsSoundPackSource(editor));
-  editor.registerSource(new TenorSource(api));
+  // editor.registerSource(new BingImagesSource(api));
+  // editor.registerSource(new BingVideosSource(api));
+  // editor.registerSource(new HubsSoundPackSource(editor));
+  editor.registerSource(new YukizemiPackSource(editor));
+  // editor.registerSource(new TenorSource(api));
 
   return editor;
 }
